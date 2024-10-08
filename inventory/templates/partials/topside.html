@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-4 mt-4">
-            <div class="card">
-                <div class="card-header text-white" style="background-color: #8156ad;">
+            <div class="card" style="border-radius: 11px; border-color: rgb(81, 81, 81);">
+                <div class="card-header text-white" style="background-color: #8156ad; border-top-right-radius: 10px; border-top-left-radius: 10px;">
                     Information
                 </div>
                 <div class="card-body">
@@ -13,14 +13,14 @@
             </div>
         </div>
         <div class="col-md-8 mt-4">
-            <div class="card">
-                <div class="card-header text-white" style="background-color: #8156ad;">
+            <div class="card" style="border-radius: 11px; border-color: rgb(81, 81, 81);">
+                <div class="card-header text-white" style="background-color: #8156ad; border-top-right-radius: 10px; border-top-left-radius: 10px;">
                     Dashboard Statistics
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <a class="text-decoration-none text-dark" href="">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard-staff' %}">
                                 <div class="card my-card shadow">
                                     <div class="card-body text-center">
                                         <h4>Staff <i class="fas fa-users"></i></h4>
@@ -30,7 +30,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a class="text-decoration-none text-dark" href="">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard-products' %}">
                                 <div class="card my-card shadow">
                                     <div class="card-body text-center">
                                         <h4>Products <i class="fas fa-box"></i></h4>
@@ -40,7 +40,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a class="text-decoration-none text-dark" href="">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard-order' %}">
                                 <div class="card my-card shadow">
                                     <div class="card-body text-center">
                                         <h4>Orders <i class="fas fa-shipping-fast"></i></h4>
