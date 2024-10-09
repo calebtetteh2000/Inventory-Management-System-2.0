@@ -7,6 +7,13 @@
 <div class="container">
     <div class="row my-4">
         <div class="col-md-4">
+            {% for message in messages %}
+            {% if message %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endif %}
+            {% endfor %}
             <div class="border bg-white p-3">
                 <h4>Add Products</h4>
                 <hr>
@@ -22,7 +29,7 @@
             <table class="table bg-white" style="border-radius: 10px;">
                 <thead style="background-color: #8156ad;">
                     <tr class="text-white">
-                        <th scope="col">#</th>
+                        <th scope="col"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Category</th>
                         <th scope="col">Quantity</th>
@@ -32,13 +39,13 @@
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"></th>
                         <td>{{ item.name }}</td>
                         <td>{{ item.category }}</td>
                         <td>{{ item.quantity }}</td>
                         <td>
-                            <a class="btn btn-outline-info" href="">Edit</a>
-                            <a class="btn btn-outline-danger" href="">Delete</a>
+                            <a class="btn btn-outline-info" href="{% url 'dashboard-product-update' item.id%}">Edit</a>
+                            <a class="btn btn-outline-danger" href="{% url 'dashboard-product-delete' item.id%}">Delete</a>
                         </td>
                     </tr>
                     {% endfor %}
